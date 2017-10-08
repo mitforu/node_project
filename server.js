@@ -17,9 +17,8 @@ app.use(bodyParser.json());
 var routes = require('./api/routes/todoListRoutes'); //importing route
 routes(app); //register the route
 
+console.log('todo list RESTful API server started on: ');
 
 app.listen(port);
-
-console.log('todo list RESTful API server started on: ' + port);
 
 console.log('todo list RESTful API server started on: ' + port);

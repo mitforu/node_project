@@ -27,15 +27,9 @@ console.log('todo list RESTful API server started on: ' + port);*/
 
 var express = require('express');
 var app = express();
-app.get('/', function (req, res) {
+/*app.get('/', function (req, res) {
   res.send('Hello World!');
-});
-
-
-app.get('/person', function (req, res) {
-  var person = { name : "Mitesh" id : 1}
-  res.send('Hello World!');
-});
+});*/
 
 app.listen(process.env.PORT, function () {
   console.log('Example app listening on port 3000!');

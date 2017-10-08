@@ -1,3 +1,5 @@
+/*
+COMMENTING IT OUT TO TEST FOR NOW
 var express = require('express'),
   app = express(),
   port = process.env.PORT || 3000;
@@ -21,4 +23,13 @@ console.log('todo list RESTful API server started on: ');
 
 app.listen(port);
 
-console.log('todo list RESTful API server started on: ' + port);
+console.log('todo list RESTful API server started on: ' + port);*/
+
+var express = require('express');
+var app = express();
+app.get('/', function (req, res) {
+  res.send('Hello World!');
+});
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!');
+});

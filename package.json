@@ -1,0 +1,22 @@
+{
+  "name": "toolistapi",
+  "version": "1.0.0",
+  "description": "Restful Toollist",
+  "main": "index.js",
+  "scripts": {
+    "test": "no test specified"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "author": "mitesh",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "express": "^4.16.1",
+    "mongoose": "^4.12.0"
+  }
+}

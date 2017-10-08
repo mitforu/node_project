@@ -33,7 +33,7 @@ var app = express();
 */
 
 app.get('/person', function (req, res) {
-  var person = { name : "Mitesh" id : 1}
+  var person = { name : "Mitesh", id : 1}
   res.send('Hello World!');
 });
 

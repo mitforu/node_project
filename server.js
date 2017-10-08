@@ -27,14 +27,24 @@ console.log('todo list RESTful API server started on: ' + port);*/
 
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+var routes = require('./api/routes/todoListRoutes'); //importing route
+routes(app); //register the route
 /*app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 */
 
+
+
  var port = process.env.PORT 
  if(port == undefined) port=3000
 
+app.listen(port);
+
+/*
 app.get('/person', function (req, res) {
   var person = { name : "Mitesh", id : 1}
   res.send(person);
@@ -42,4 +52,4 @@ app.get('/person', function (req, res) {
 
 app.listen(port, function () {
   console.log('Example app listening on port ' + port);
-});
+});*/

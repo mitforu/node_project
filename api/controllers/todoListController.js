@@ -1,6 +1,13 @@
 'use strict';
 
 
+exports.list_person = function(req, res) {
+   var person = { name : "Mitesh", id : 1}
+  res.send(person);
+};
+
+
+/*
 var mongoose = require('mongoose'),
   Task = mongoose.model('Tasks');
 
@@ -50,5 +57,4 @@ exports.delete_a_task = function(req, res) {
     if (err)
       res.send(err);
     res.json({ message: 'Task successfully deleted' });
-  });
-};
+  }); */

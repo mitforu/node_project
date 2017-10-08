@@ -32,11 +32,14 @@ var app = express();
 });
 */
 
+ var port = process.env.PORT 
+ if(port == undefined) port=3000
+
 app.get('/person', function (req, res) {
   var person = { name : "Mitesh", id : 1}
-  res.send('Hello World!');
+  res.send(person);
 });
 
-app.listen(process.env.PORT, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(port, function () {
+  console.log('Example app listening on port ' + port);
 });

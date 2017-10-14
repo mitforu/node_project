@@ -1,10 +1,21 @@
 'use strict';
 
+var path    = require("path");
 
 exports.list_person = function(req, res) {
    var person = { name : "Mitesh", id : 1}
-  res.send(person);
+   res.send(person);
 };
+
+exports.show_home_page = function(req, res) {
+   
+  console.log("Inside home")
+
+  console.log()
+  res.sendFile(path.resolve('.')+'/index.html');
+};
+
+
 
 
 /*

@@ -7,6 +7,9 @@ module.exports = function(app) {
   app.route('/person')
   	.get(todoList.list_person)
 
+  app.route('/home')
+    .get(todoList.show_home_page)
+
 /*
   // todoList Routes
   app.route('/tasks')

@@ -68,12 +68,15 @@ app.listen(port, function () {
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
+var port = 8081
 
 // Create a server
 http.createServer( function (request, response) {  
    // Parse the request containing file name
    var pathname = url.parse(request.url).pathname;
    
+   port = process.env.PORT || 8081
+
    // Print the name of the file for which request is made.
    console.log("Request for " + pathname + " received.");
    
@@ -96,10 +99,10 @@ http.createServer( function (request, response) {
       // Send the response body 
       response.end();
    });   
-}).listen(8081);
+}).listen(port);
 
 // Console will print the message
-console.log('Server running at http://127.0.0.1:8081/');
+//console.log('Server running at http://127.0.0.1:8081/');
 
 
 

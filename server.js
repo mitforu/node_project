@@ -76,6 +76,7 @@ http.createServer( function (request, response) {
    var pathname = url.parse(request.url).pathname;
    
    port = process.env.PORT || 8081
+   console.loh("------------------getting port" + port)
 
    // Print the name of the file for which request is made.
    console.log("Request for " + pathname + " received.");
@@ -99,7 +100,7 @@ http.createServer( function (request, response) {
       // Send the response body 
       response.end();
    });   
-}).listen(port);
+}).listen(process.env.PORT);
 
 // Console will print the message
 //console.log('Server running at http://127.0.0.1:8081/');
